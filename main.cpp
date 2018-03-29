@@ -1,4 +1,4 @@
-//Author:
+//Author:Ryan Persons
 #include <iostream>
 #include <fstream>
 
@@ -13,12 +13,13 @@ int main()
   //lower case) should be assigned to first and the last letter (again in
   //either case) from the file to the variable last
 
-  in>>current;
-  while(in.eof())
+
+  while(!in.eof())
   {
-    if(first >= 'a' && last <= 'z' && first >= 'A' && last <= 'B')
+    in>>current;
+    if(current >= 'a' && current <= 'z' || current >= 'A' && current <= 'Z')
     {
-        if(current == ' ')
+        if(first == ' ')
         {
             first = current;
         }
